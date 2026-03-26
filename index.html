@@ -7,6 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* fallback while fonts load */
+body { font-family: 'Tajawal', 'Segoe UI', Tahoma, Arial, sans-serif; }
+.nav-logo, .hero-sub, .section-label, .skill-card .sk-name,
+.av-title, .ct-label, .ci-sub, .footer-copy, .footer-logo,
+.gh-link, .proj-tag { font-family: 'Syne', 'Segoe UI', Arial, sans-serif; }
+</style>
 
 <style>
 :root{
@@ -161,15 +168,18 @@ nav{
 
 /* floating code card */
 .hero-card{
-  position:absolute;right:6%;top:50%;transform:translateY(-50%);
-  background:rgba(255,255,255,0.04);
-  border:1px solid rgba(99,102,241,0.2);
-  border-radius:20px;padding:28px;
-  width:320px;
+  position:absolute;right:3%;top:50%;transform:translateY(-50%);
+  background:rgba(10,8,40,0.85);
+  border:1px solid rgba(99,102,241,0.3);
+  border-radius:20px;padding:22px;
+  width:260px;
   backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
   display:none;
+  z-index:2;
 }
-@media(min-width:1100px){.hero-card{display:block;}}
+@media(min-width:1280px){.hero-card{display:block;}}
+.hero-content{position:relative;z-index:1;max-width:600px;}
 .code-line{
   font-family:'Syne',sans-serif;
   font-size:12px;margin-bottom:10px;
